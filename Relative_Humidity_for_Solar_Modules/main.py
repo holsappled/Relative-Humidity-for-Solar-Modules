@@ -1,7 +1,7 @@
 """
 Contains energy algorithms for processing.
 
-@author: Derek Holsapple
+@author: Derek Holsapple and Michael Kempe
 """
 
 import numpy as np
@@ -69,7 +69,8 @@ class energyCalcs:
         "Estimating dew yield worldwide from a few meteo data"
             -D. Beysens
 
-        (ADD IEEE reference)
+        Beysens, D. (2016). Estimating dew yield worldwide from a few meteo 
+        data. Atmospheric Research Volume 167, 1, Pages 146-155
 
         Parameters
         -----------        
@@ -268,8 +269,8 @@ class energyCalcs:
         """
         Helper function. Find the relative power produced from a solar module.
     
-        Model derived from Mike Kempe Calculation on paper
-        (ADD IEEE reference)
+        Model derived from Mike Kempe Calculation from excel sheet
+        
         
         Parameters
         ------------
@@ -302,7 +303,9 @@ class energyCalcs:
         color shift, cracking, gloss loss, fluorescense loss, 
         retroreflectance loss, adhesive transfer, and shrinkage.
         
-        (ADD IEEE reference)
+        R. M. Fischer and W. D. Ketola, "Error Analyses and Associated Risk for
+        Accelerated Weathering Results," Third International Service Life
+        Symposium, Sedona, AZ February 2004
         
         Parameters
         ------------
@@ -333,7 +336,9 @@ class energyCalcs:
         Helper function. Find the rate of degradation kenetics of a simulated chamber. Mike Kempe's 
         calculation of the rate of degradation inside a accelerated degradation chamber. 
         
-        (ADD IEEE reference)
+        R. M. Fischer and W. D. Ketola, "Error Analyses and Associated Risk for
+        Accelerated Weathering Results," Third International Service Life 
+        Symposium, Sedona, AZ February 2004
 
         Parameters
         ----------
@@ -357,7 +362,9 @@ class energyCalcs:
         """
         Helper Function. Find the acceleration factor 
         
-        (ADD IEEE reference)
+        R. M. Fischer and W. D. Ketola, "Error Analyses and Associated Risk for
+        Accelerated Weathering Results," Third International Service Life 
+        Symposium, Sedona, AZ February 2004
 
         Parameters
         ----------
@@ -381,6 +388,10 @@ class energyCalcs:
     def vantHoffDeg( x , Ichamber , poa , Toutdoor , Tf , refTemp):    
         """
         Vant Hoff Irradiance Degradation 
+        
+        R. M. Fischer and W. D. Ketola, "Error Analyses and Associated Risk for
+        Accelerated Weathering Results," Third International Service Life 
+        Symposium, Sedona, AZ February 2004
         
         Parameters
         -----------
@@ -428,6 +439,10 @@ class energyCalcs:
         """
         Function to obtain the Vant Hoff temperature equivalent (C)
         
+        R. M. Fischer and W. D. Ketola, "Error Analyses and Associated Risk for
+        Accelerated Weathering Results," Third International Service Life 
+        Symposium, Sedona, AZ February 2004
+        
         Parameters
         ----------
         Tf : float
@@ -455,6 +470,11 @@ class energyCalcs:
         IWa : Environment Characterization (W/m^2)
         *for one year of degredation the controlled environmnet lamp settings will 
             need to be set to IWa
+        
+        
+        R. M. Fischer and W. D. Ketola, "Error Analyses and Associated Risk for
+        Accelerated Weathering Results," Third International Service Life 
+        Symposium, Sedona, AZ February 2004
         
         Parameters
         -----------
@@ -1264,7 +1284,7 @@ class relativeHumidity:
             Relative Humidity of Backside Backsheet of a Solar Module
             
         @return rH_Surface     -
-\                             
+                             
         """
         
         RHbacksheet_series = (RHbackEncap + RHsurfaceOutside)/2
